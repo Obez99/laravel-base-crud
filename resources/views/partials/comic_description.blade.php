@@ -12,6 +12,12 @@
           </tbody>
         </table>
         <p>{{$comic->description}}</p>
+
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success"><strong>Serie:</strong> {{$comic->series}}</li>
+          <li class="list-group-item list-group-item-success"><strong>Pubblicazione:</strong> {{$comic->sale_date}}</li>
+          <li class="list-group-item list-group-item-success"><strong>Genere:</strong> {{$comic->type}}</li>
+        </ul>
       </div>
       <div class="col-4 d-flex flex-column align-items-end">
         <h5 class="text-end">Advertisement</h5>
