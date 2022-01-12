@@ -6,7 +6,7 @@
         <table class="table price-table">
           <tbody>
             <tr>
-              <td class="price-td"><span>U.S. Price: <span class="text-light">{{$comic["price"]}}</span></span><span>AVAILABLE</span></td>
+              <td class="price-td"><span>U.S. Price: <span class="text-light">{{"$ " . $comic["price"]}}</span></span><span>AVAILABLE</span></td>
               <td class="text-center availability-td col-3 text-light">Check Availability <i class="fas fa-caret-down"></i></td>
             </tr>
           </tbody>

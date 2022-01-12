@@ -17,12 +17,12 @@ class CreateComicsTable extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
-            $table->string("title", 50)->nullable(false);
+            $table->string("title", 50);
             $table->text("description");
-            $table->text("thumb");
-            $table->float("price", 6, 2);
+            $table->text("thumb")->nullable();
+            $table->float("price", 6, 2)->nullable();
             $table->string("series", 100);  //Should be foreign key
-            $table->date("sale_date");
+            $table->date("sale_date")->nullable();
             $table->string("type", 50); //Should be foreign key
             $table->timestamps();
         });
