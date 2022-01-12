@@ -226,6 +226,156 @@ header nav .bottom-header .container .input-group .input-group-text {
   color: #0d6efd;
 }
 
+.divider {
+  height: 80px;
+  background-color: #0d6efd;
+}
+
+.divider .container .cover-container {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  bottom: 250px;
+  border: 1px solid white;
+}
+
+.divider .container .cover-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.divider .container .cover-container .cover-text {
+  position: absolute;
+  top: 0;
+  background-color: #0d6efd;
+  color: white;
+  padding: 0 5px;
+}
+
+.divider .container .cover-container a.cover-text {
+  top: unset;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.price-table tr {
+  background-color: #5abb5a;
+}
+
+.price-table tr .price-td {
+  border-right: 1px solid black;
+  padding: 0.5rem 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-table tr .price-td span {
+  color: lightgreen;
+}
+
+.price-table tr .price-td,
+.price-table tr .availability-td {
+  border-bottom: 1px solid black;
+}
+
+.table-section {
+  background-color: #f0f0f0;
+  padding-top: 50px;
+}
+
+.table-section .td-authors {
+  max-width: 100px;
+}
+
+.table-section tr {
+  font-size: 13px;
+}
+
+.table-section tr th {
+  font-size: 25px;
+}
+
+.full-page-borders {
+  margin-top: 150px;
+  border: 1px solid lightgray;
+  color: lightgray;
+}
+
+.full-page-borders .row {
+  height: 100px;
+}
+
+.full-page-borders .row .col-3 {
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  position: relative;
+  cursor: pointer;
+}
+
+.full-page-borders .row .col-3:hover .alt-shop-text {
+  color: #0d6efd;
+}
+
+.full-page-borders .row .col-3:hover .img-1 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) 0 -60px;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3:hover .img-2 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) -180px -60px;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3:hover .img-3 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) -120px -60px;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3:hover .img-4 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) -60px -60px;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3 .alt-shop-image {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transition: background 0.5s;
+}
+
+.full-page-borders .row .col-3 .alt-shop-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  color: #a3a3a3;
+  transition: color 0.5s;
+}
+
+.full-page-borders .row .col-3 .img-1 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) 0 0;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3 .img-2 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) -180px 0;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3 .img-3 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) -120px 0;
+  background-size: 240px;
+}
+
+.full-page-borders .row .col-3 .img-4 {
+  background: url(/images/cta-icons.png?66ce11d0fe1c08d1276451a49fdd1bb9) -60px 0;
+  background-size: 240px;
+}
+
 body a {
   text-decoration: none;
 }

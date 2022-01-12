@@ -3,13 +3,14 @@
 @section('title', "DC Comics - Homepage")
 
 @section('content')
+<section class="comics-section">
   <div class="container">
     <h4>CURRENT SERIES</h4>
 
       <div class="comics-container">
         <div class="row row-cols-6">
           @foreach ($comics as $comic)
-          <a href="#">
+          <a href="{{route("comics.show", $comic->id)}}">
             <div class="col comics-card">
               <img src="{{$comic["thumb"]}}" alt="{{$comic["series"]}}">
               <h6>{{$comic["series"]}}</h6>
@@ -19,7 +20,7 @@
         </div>
 
         <button>LOAD MORE</button>
-        <a href="{{route("create")}}">+</a>
+        <a href="{{route("comics.create")}}">+</a>
       </div>
     </div>
   </section>
@@ -69,4 +70,5 @@
         </div>
       </div>
   </div>
+</section>
 @endsection

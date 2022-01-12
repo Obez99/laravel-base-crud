@@ -43,7 +43,7 @@ class ComicsController extends Controller
         $newComic->fill($data);
         $newComic->save();
 
-        return redirect()->route("index");
+        return redirect()->route("comics.index");
     }
 
     /**
@@ -52,9 +52,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        //
+        return view("home.comic_details", compact("comic"));
     }
 
     /**

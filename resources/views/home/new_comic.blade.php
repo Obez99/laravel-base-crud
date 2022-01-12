@@ -4,9 +4,9 @@
 
 @section('content')
 <div class="container">
-  <form action="{{route("store")}}" method="post" class="py-5">
+  <form action="{{route("comics.store")}}" method="post" class="py-5">
     @csrf
-    
+
     <div class="form-floating mb-3">
       <input type="text" class="form-control" id="floatingInput" placeholder="Titolo" name="title">
       <label for="floatingInput">Titolo</label>
