@@ -19,8 +19,10 @@
           @endforeach
         </div>
 
-        <button>LOAD MORE</button>
-        <a href="{{route("comics.create")}}">+</a>
+        <div class="d-flex justify-content-around">
+          <button class="buttons">LOAD MORE</button>
+          <a class="buttons" href="{{route("comics.create")}}">ADD COMIC</a>
+        </div>
       </div>
     </div>
   </section>
