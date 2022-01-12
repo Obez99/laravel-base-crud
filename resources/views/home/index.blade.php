@@ -18,6 +18,7 @@
         </div>
 
         <button>LOAD MORE</button>
+        <a href="{{route("create")}}">+</a>
       </div>
     </div>
   </section>
