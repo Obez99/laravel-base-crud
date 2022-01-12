@@ -12,8 +12,12 @@
           @foreach ($comics as $comic)
           <a href="{{route("comics.show", $comic->id)}}">
             <div class="col comics-card">
-              <img src="{{$comic["thumb"]}}" alt="{{$comic["series"]}}">
-              <h6>{{$comic["series"]}}</h6>
+              @if($comic->thumb)
+                <img src="{{$comic->thumb}}" alt="{{$comic->series}}">
+                @else
+                <img src="{{asset('img/no-image.jpg')}}" alt="">
+                <h6>{{$comic->series}}</h6>
+              @endif
             </div> 
           </a>
           @endforeach

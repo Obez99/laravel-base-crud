@@ -8,7 +8,9 @@
   <nav>
     <div class="bottom-header">
       <div class="container">
-        <img src="{{asset('img/dc-logo.png')}}" alt="">
+        <a href="{{route("comics.index")}}">
+          <img src="{{asset('img/dc-logo.png')}}" alt="">
+        </a>
         <ul>
           <li><a href="#">CHARACTERS</a></li>
           <li><a href="#">COMICS</a></li>
