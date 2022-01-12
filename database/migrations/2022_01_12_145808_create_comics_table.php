@@ -24,7 +24,7 @@ class CreateComicsTable extends Migration
             $table->string("series", 100);  //Should be foreign key
             $table->date("sale_date");
             $table->string("type", 50); //Should be foreign key
-            $table->$table->timestamps();
+            $table->timestamps();
         });
     }
 
