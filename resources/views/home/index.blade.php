@@ -3,18 +3,19 @@
 @section('title', "DC Comics - Homepage")
 
 @section('content')
-  <section class="comics-section">
-    <div class="container">
+  <div class="container">
     <h4>CURRENT SERIES</h4>
 
       <div class="comics-container">
         <div class="row row-cols-6">
+          @foreach ($comics as $comic)
           <a href="#">
             <div class="col comics-card">
-              <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX">
-              <h6>Title</h6>
+              <img src="{{$comic["thumb"]}}" alt="{{$comic["series"]}}">
+              <h6>{{$comic["series"]}}</h6>
             </div> 
           </a>
+          @endforeach
         </div>
 
         <button>LOAD MORE</button>
@@ -67,6 +68,5 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </div>
 @endsection
