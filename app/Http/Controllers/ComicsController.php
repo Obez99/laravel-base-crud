@@ -40,10 +40,10 @@ class ComicsController extends Controller
         $request->validate([
             "title" => "required|string",
             "description" => "required|string|max:2500",
-            "thumb" => "active_url",
-            "price" => "numeric",
+            "thumb" => "nullable|active_url",
+            "price" => "nullable|numeric",
             "series" => "required|string|max:100",
-            "sale_date" => "date",
+            "sale_date" => "nullable|date",
             "type" => "required|string|max:50",
         ]);
 
@@ -55,6 +55,7 @@ class ComicsController extends Controller
 
         return redirect()->route("comics.index");
     }
+
 
     /**
      * Display the specified resource.
