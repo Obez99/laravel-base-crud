@@ -89,7 +89,7 @@ class ComicsController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $request->validate([
-            "title" => "string||unique:comics,title",
+            "title" => "string|unique:comics,title",
             "description" => "string|max:2500",
             "thumb" => "nullable|active_url",
             "price" => "nullable|numeric",
@@ -109,8 +109,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route("comics.index");
     }
 }
