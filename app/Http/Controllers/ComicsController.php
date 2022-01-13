@@ -38,7 +38,7 @@ class ComicsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "title" => "required|string",
+            "title" => "required|string|unique:comics,title",
             "description" => "required|string|max:2500",
             "thumb" => "nullable|active_url",
             "price" => "nullable|numeric",
@@ -74,9 +74,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        return view("home.edit_comic", compact("comic"));
     }
 
     /**
@@ -86,9 +86,21 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $request->validate([
+            "title" => "string||unique:comics,title",
+            "description" => "string|max:2500",
+            "thumb" => "nullable|active_url",
+            "price" => "nullable|numeric",
+            "series" => "string|max:100",
+            "sale_date" => "nullable|date",
+            "type" => "string|max:50",
+        ]);
+
+        $updatedComic = $request->all();
+        $comic->update($updatedComic);
+        return redirect()->route("comics.show", $comic);
     }
 
     /**

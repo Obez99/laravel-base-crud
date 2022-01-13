@@ -5,10 +5,6 @@
 @section('content')
 <div class="container">
 
-  <div>
-
-  </div>
-
   @if($errors->any())
   <div class="alert alert-danger mt-5" role="alert">
     <ul>
