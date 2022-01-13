@@ -18,6 +18,8 @@
           <li class="list-group-item list-group-item-success"><strong>Pubblicazione:</strong> {{$comic->sale_date ? $comic->sale_date : "Nessuna data disponibile."}}</li>
           <li class="list-group-item list-group-item-success"><strong>Genere:</strong> {{$comic->type}}</li>
         </ul>
+
+          <a href="" class="btn btn-outline-primary mt-5 float-end">Modifica</a>
       </div>
       <div class="col-4 d-flex flex-column align-items-end">
         <h5 class="text-end">Advertisement</h5>
