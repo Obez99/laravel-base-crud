@@ -6,7 +6,7 @@
   <section class="divider">
     <div class="container">
       <div class="cover-container">
-        <img src="{{$comic->thumb}}" alt="{{$comic->title . " image"}}">
+        <img src="{{$comic->thumb ? $comic->thumb : asset("img/no-image.jpg")}}" alt="{{$comic->title . " image"}}">
         <div class="cover-text text-uppercase">{{$comic->type}}</div>
         <a href="#" class="cover-text">VIEW GALLERY</a>
       </div>

@@ -6,7 +6,7 @@
         <table class="table price-table">
           <tbody>
             <tr>
-              <td class="price-td"><span>U.S. Price: <span class="text-light">{{"$ " . $comic->price}}</span></span><span>AVAILABLE</span></td>
+              <td class="price-td"><span>U.S. Price: <span class="text-light">{{$comic->price ? "$ " . $comic->price : "Nessun prezzo disponibile."}}</span></span><span>AVAILABLE</span></td>
               <td class="text-center availability-td col-3 text-light">Check Availability <i class="fas fa-caret-down"></i></td>
             </tr>
           </tbody>
@@ -15,7 +15,7 @@
 
         <ul class="list-group">
           <li class="list-group-item list-group-item-success"><strong>Serie:</strong> {{$comic->series}}</li>
-          <li class="list-group-item list-group-item-success"><strong>Pubblicazione:</strong> {{$comic->sale_date}}</li>
+          <li class="list-group-item list-group-item-success"><strong>Pubblicazione:</strong> {{$comic->sale_date ? $comic->sale_date : "Nessuna data disponibile."}}</li>
           <li class="list-group-item list-group-item-success"><strong>Genere:</strong> {{$comic->type}}</li>
         </ul>
       </div>
