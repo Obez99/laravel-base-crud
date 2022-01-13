@@ -86,7 +86,7 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
         $request->validate([
             "title" => "string||unique:comics,title",
@@ -97,6 +97,10 @@ class ComicsController extends Controller
             "sale_date" => "nullable|date",
             "type" => "string|max:50",
         ]);
+
+        $updatedComic = $request->all();
+        $comic->update($updatedComic);
+        return redirect()->route("comics.show", $comic);
     }
 
     /**
