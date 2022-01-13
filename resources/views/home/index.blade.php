@@ -15,9 +15,9 @@
               @if($comic->thumb)
                 <img src="{{$comic->thumb}}" alt="{{$comic->series}}">
                 @else
-                <img src="{{asset('img/no-image.jpg')}}" alt="">
-                <h6>{{$comic->series}}</h6>
-              @endif
+                <img src="{{asset('img/no-image.jpg')}}" alt="no-image">
+                @endif
+                <h6>{{$comic->title}}</h6>
             </div> 
           </a>
           @endforeach
