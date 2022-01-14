@@ -92,7 +92,7 @@ class ComicsController extends Controller
             "title" => "string|unique:comics,title," . $comic->id,
             "description" => "string|max:2500",
             "thumb" => "nullable|active_url",
-            "price" => "nullable|numeric",
+            "price" => "nullable|numeric|max:999",
             "series" => "string|max:100",
             "sale_date" => "nullable|date",
             "type" => "string|max:50",

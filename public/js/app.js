@@ -19380,6 +19380,17 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+window.addEventListener("DOMContentLoaded", function () {
+  $deleteButton = document.querySelector(".delete-form");
+  $deleteButton.addEventListener("submit", function (e) {
+    if (!confirm("Sicuro di voler eliminare il fumetto? L'operazione sarà irreversibile.")) {
+      e.preventDefault();
+    }
+
+    ;
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

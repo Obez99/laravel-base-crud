@@ -117,6 +117,7 @@ header nav .bottom-header .container .input-group .input-group-text {
 
 .comics-section .container .comics-container .comics-card {
   margin-bottom: 30px;
+  transition: transform 0.5s;
 }
 
 .comics-section .container .comics-container .comics-card img {
@@ -127,6 +128,10 @@ header nav .bottom-header .container .input-group .input-group-text {
   -o-object-position: top;
      object-position: top;
   margin-bottom: 10px;
+}
+
+.comics-section .container .comics-container .comics-card:hover {
+  transform: scale(1.1);
 }
 
 .comics-section .container .comics-container .comics-card h6 {

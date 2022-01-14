@@ -2,34 +2,39 @@
   background-color: rgb(44, 43, 43);
   .container{
     position: relative;
-      h4{
-        display: inline-block;
-        background-color: $color-primary;
-        color:white;
-        padding:10px 15px;
-
-        position: absolute;
-        top:-25px;
-        left:0;
-      }
-
-      .comics-container{
-        padding: 50px 0;
-        .comics-card{
-          margin-bottom:30px;
-          img{
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-            object-position: top;
-            margin-bottom: 10px;
-          }
-          
-          h6{
-            color:white;
-            text-transform: uppercase;
-          }
+    h4{
+      display: inline-block;
+      background-color: $color-primary;
+      color:white;
+      padding:10px 15px;
+      
+      position: absolute;
+      top:-25px;
+      left:0;
+    }
+    
+    .comics-container{
+      padding: 50px 0;
+      .comics-card{
+        margin-bottom:30px;
+        transition: transform 0.5s;
+        img{
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+          margin-bottom: 10px;
         }
+
+        &:hover{
+          transform: scale(1.1);
+        }
+        
+        h6{
+          color:white;
+          text-transform: uppercase;
+        }
+      }
 
         .buttons{
           background-color: $color-primary;
@@ -39,6 +44,7 @@
           margin-top:20px;
           margin-bottom: 10px;
         }
+
       }
   }
 }

@@ -30,12 +30,12 @@
     </div>
 
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Immagine" value="{{$comic->thumb}}" name="thumb">
+      <input type="text" class="form-control" id="floatingInput" placeholder="Immagine" value="{{$comic->thumb ?? $comic->old("thumb")}}" name="thumb">
       <label for="floatingInput">Immagine</label>
     </div>
 
     <div class="form-floating mb-3">
-      <input type="number" class="form-control" id="floatingInput" placeholder="Prezzo" value="{{$comic->price}}" name="price">
+      <input type="number" step="0.99" class="form-control" id="floatingInput" placeholder="Prezzo" value="{{$comic->price}}" name="price">
       <label for="floatingInput">Prezzo</label>
     </div>
 
